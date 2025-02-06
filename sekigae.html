@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seatify</title>
+  <link rel="stylesheet" href="sekigae.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="seating">Seating</button>
+      <button class="tab-button" data-tab="members">Members</button>
+      <button class="tab-button" data-tab="customize">Customize</button>
+    </div>
+
+    <!-- Seating Tab -->
+    <div class="tab-content active" id="seating">
+      <h2>Seating Results</h2>
+      <div id="seats" class="seats-grid"></div>
+      <button id="shuffleButton" class="btn btn-shuffle">Shuffle</button>
+      <button id="saveSeatingData" class="btn btn-save">Save Seating</button>
+      <button id="restoreSeatingData" class="btn btn-restore">Restore Seating</button>
+    </div>
+
+    <!-- Members Tab -->
+    <div class="tab-content" id="members">
+      <h2>Members</h2>
+      <p>Written: <span id="memberCount">0</span> students </p>
+      <div id="memberList" class="member-list"></div>
+      <div class="buttons">
+        <button id="addMember" class="btn btn-add">Add Member</button>
+        <button id="clearAll" class="btn btn-clear">Clear All</button>
+        <button id="saveMembersData" class="btn btn-save">Save Members</button>
+        <button id="restoreMembersData" class="btn btn-restore">Restore Members</button>
+      </div>
+    </div>
+
+    <!-- Customize Tab -->
+    <div class="tab-content" id="customize">
+      <h2>Seating Chart Customization</h2>
+      <div class="grid-config">
+        <label for="rows">Rows:</label>
+        <input type="number" id="rows" value="4" min="1" />
+        <label for="columns">Columns:</label>
+        <input type="number" id="columns" value="4" min="1" />
+        <button id="updateGrid" class="btn btn-update">Update Grid</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="language-switch">
+    <button id="lang-en" class="btn btn-lang">English</button>
+    <button id="lang-ja" class="btn btn-lang">日本語</button>
+  </div>
+
+  <script src="lang-en.js"></script>
+  <script src="lang-ja.js"></script>
+  <script src="sekigae.js"></script>
+
+</body>
+</html>
